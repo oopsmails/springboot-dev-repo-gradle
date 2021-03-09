@@ -1,0 +1,3 @@
+rootProject.name = 'springboot-dev-repo-gradle'
+include 'spring-boot-java-main'
+include 'spring-boot-mock-backend'
