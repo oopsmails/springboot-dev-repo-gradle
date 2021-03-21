@@ -1,5 +1,23 @@
 
 
+- useful docker commands
+
+```
+albert@eosvm:~/Documents/github/springboot-dev-repo-gradle/spring-boot-kafka-microservice-email-files$ docker-compose up
+
+albert@eosvm:~/Documents/github/springboot-dev-repo-gradle/spring-boot-kafka-microservice-email-files$ docker-compose down
+
+albert@eosvm:~/Documents/github/springboot-dev-repo-gradle/spring-boot-kafka-microservice-email-files$ docker-compose start
+
+albert@eosvm:~/Documents/github/springboot-dev-repo-gradle/spring-boot-kafka-microservice-email-files$ docker-compose stop
+
+docker ps -a
+
+docker volume list
+
+docker volume prune
+
+```
 
 - ERROR: Pool overlaps with other one on this address space
 
