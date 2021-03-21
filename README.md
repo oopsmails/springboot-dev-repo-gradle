@@ -7,6 +7,14 @@ https://spring.io/guides/gs/multi-module/
 Thanks!
 
 
+## Run Gradle build
+
+- intellij, springboot-dev-repo-gradle
+
+Tasks, build, build
+
+- command line
+
 $ ./gradlew build && ./gradlew :application:bootRun
 
 
