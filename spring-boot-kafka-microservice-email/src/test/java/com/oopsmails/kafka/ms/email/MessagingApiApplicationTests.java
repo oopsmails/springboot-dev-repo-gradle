@@ -1,4 +1,4 @@
-package com.sipios.messagingapi;
+package com.oopsmails.kafka.ms.email;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
