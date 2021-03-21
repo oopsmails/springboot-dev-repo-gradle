@@ -19,6 +19,51 @@ docker volume prune
 
 ```
 
+- Kafka + Admin UI (Kafdrop) for Local Development with Docker Compose
+
+https://luisdiasdev.medium.com/kafka-kafdrop-for-local-development-with-docker-compose-f2b00a6dda8
+
+```
+version: '3'
+
+services:
+  zookeeper:
+    image: bitnami/zookeeper:3-debian-10
+    ports:
+      - 2181:2181
+    volumes:
+      - zookeeper_data:/bitnami
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+
+  kafka:
+    image: bitnami/kafka:2-debian-10
+    ports:
+      - 9092:9092
+    volumes:
+      - kafka_data:/bitnami
+    environment:
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    depends_on:
+      - zookeeper
+
+  kafdrop:
+    image: obsidiandynamics/kafdrop
+    ports:
+      - 9100:9000
+    environment:
+      - KAFKA_BROKERCONNECT=kafka:9092
+      - JVM_OPTS=-Xms32M -Xmx64M
+    depends_on:
+      - kafka
+
+volumes:
+  zookeeper_data:
+  kafka_data
+```
+
+
 - ERROR: Pool overlaps with other one on this address space
 
 That error suggest a conflict. You could list the network docker network ls and delete the existing one should you find it docker network rm my_network

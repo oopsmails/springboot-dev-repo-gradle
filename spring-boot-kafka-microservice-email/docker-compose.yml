@@ -25,6 +25,18 @@ services:
     depends_on:
       - zookeeper
 
+  # kakfa console
+  kafdrop:
+    image: obsidiandynamics/kafdrop
+    ports:
+      - 9100:9000
+    environment:
+      - KAFKA_BROKERCONNECT=kafka:9092
+      - JVM_OPTS=-Xms32M -Xmx64M
+    depends_on:
+      - kafka
+
+
   # Mailhog: mail catcher for local debugging
   mailhog:
     image: mailhog/mailhog
