@@ -7,17 +7,29 @@ plugins {
 group = 'com.oopsmails.springboot.dev.repo.gradle'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+description = "Gradle start tutorial spring boot java"
 
 repositories {
 	mavenCentral()
 }
 
+def projectName = 'spring-boot-java-main'
+//def buildVersion = System.getenv("BUILD_NUMBER") ?: "0"
+def buildVersion = System.getenv("BUILD_NUMBER")
+def projectVersion = buildVersion != null ? buildVersion : "0.0.1"
+
 bootJar {
-	enabled = false
+	enabled = false // for testing java, no mainClass defined
+	archivesBaseName="$projectName"+"-boot"
+	project.version="$projectVersion"
 }
 
 jar {
 	enabled = true
+	archivesBaseName="$projectName"
+	project.version="$projectVersion"
 }
 
 dependencies {

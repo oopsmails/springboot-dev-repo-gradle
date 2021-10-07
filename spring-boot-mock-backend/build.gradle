@@ -12,9 +12,37 @@ repositories {
 	mavenCentral()
 }
 
+def projectName = 'spring-boot-mock-backend'
+def buildVersion = System.getenv("BUILD_NUMBER")
+def projectVersion = buildVersion != null ? buildVersion : "0.0.1"
+
+bootJar {
+	enabled = true
+	archivesBaseName="$projectName"+"-boot"
+	project.version="$projectVersion"
+}
+
+jar {
+	enabled = true
+	archivesBaseName="$projectName"
+	project.version="$projectVersion"
+}
+
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
 	implementation project(':spring-boot-java-main')
+//	implementation group: 'com.oopsmails.springboot.dev.repo.gradle', name: 'spring-boot-java-main', version: '0.0.1-SNAPSHOT'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
 }
