@@ -1,8 +1,10 @@
 package com.example.multimodule.service;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("service")
+@Data
 public class ServiceProperties {
 
 	/**
@@ -10,11 +12,11 @@ public class ServiceProperties {
 	 */
 	private String message;
 
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
+//	public String getMessage() {
+//		return message;
+//	}
+//
+//	public void setMessage(String message) {
+//		this.message = message;
+//	}
 }

@@ -16,6 +16,11 @@ public class MyServiceTest {
 
 	@Test
 	public void contextLoads() {
+//		assertThat(myService.message()).isNotNull();
+	}
+
+	@Test
+	public void serviceMessageNotNull() {
 		assertThat(myService.message()).isNotNull();
 	}
 
