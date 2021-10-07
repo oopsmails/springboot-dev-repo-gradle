@@ -54,7 +54,7 @@ dependencies {
 
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools:2.5.2'
 
-	testImplementation 'org.springframework.boot:spring-boot-starter-test2.5.2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.2'
 }
 
 test {
