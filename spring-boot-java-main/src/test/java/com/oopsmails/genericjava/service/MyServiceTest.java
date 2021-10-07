@@ -1,7 +1,8 @@
-package com.example.multimodule.service;
+package com.oopsmails.genericjava.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.oopsmails.genericjava.service.MyService;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;

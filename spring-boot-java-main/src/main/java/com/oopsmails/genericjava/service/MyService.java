@@ -1,4 +1,4 @@
-package com.example.multimodule.service;
+package com.oopsmails.genericjava.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

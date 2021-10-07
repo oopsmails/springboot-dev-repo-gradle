@@ -1,4 +1,4 @@
-package com.example.multimodule.service;
+package com.oopsmails.genericjava.service;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
