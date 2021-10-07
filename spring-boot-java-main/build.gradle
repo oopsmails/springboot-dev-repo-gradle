@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.5.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'maven-publish' // this is for publishing to maven local
 }
 
 group = 'com.oopsmails.springboot.dev.repo.gradle'
@@ -13,6 +14,7 @@ description = "Gradle start tutorial spring boot java"
 
 repositories {
 	mavenCentral()
+	mavenLocal() // this is for publishing to maven local
 }
 
 def projectName = 'spring-boot-java-main'
@@ -30,17 +32,29 @@ jar {
 	enabled = true
 	archivesBaseName="$projectName"
 	project.version="$projectVersion"
+	archiveClassifier = ''
+}
+
+publishing { // this is for publishing to maven local
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+		}
+	}
+	repositories {
+		mavenLocal()
+	}
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter:2.5.2' // version is required for publishing
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
-	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools:2.5.2'
 
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test2.5.2'
 }
 
 test {

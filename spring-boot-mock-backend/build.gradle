@@ -10,6 +10,7 @@ sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+	mavenLocal()
 }
 
 def projectName = 'spring-boot-mock-backend'
@@ -32,8 +33,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
-	implementation project(':spring-boot-java-main')
-//	implementation group: 'com.oopsmails.springboot.dev.repo.gradle', name: 'spring-boot-java-main', version: '0.0.1-SNAPSHOT'
+//	implementation project(':spring-boot-java-main') // working within IDEs
+
+//	implementation group: 'com.oopsmails.springboot.dev.repo.gradle',
+//			name: 'spring-boot-java-main',
+//			version: '0.0.1' // This is also working
+
+	implementation 'com.oopsmails.springboot.dev.repo.gradle:spring-boot-java-main:0.0.1'
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
