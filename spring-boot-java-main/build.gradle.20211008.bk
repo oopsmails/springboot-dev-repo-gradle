@@ -14,7 +14,10 @@ description = "Gradle start tutorial spring boot java"
 
 repositories {
 	mavenCentral()
-	mavenLocal() // this is for publishing to maven local
+//	mavenLocal() // this is for publishing to maven local
+	mavenLocal {
+		url 'file://' + System.getProperty('user.home') + '/.m2/repository-gradle/'
+	}
 }
 
 def projectName = 'spring-boot-java-main'
@@ -36,7 +39,6 @@ jar {
 }
 
 publishing { // this is for publishing to maven local
-	println System.getProperty('user.home')
 	println jar.archiveFileName
 	println jar.archiveName
 
@@ -45,7 +47,15 @@ publishing { // this is for publishing to maven local
 			from components.java
 		}
 	}
+//	repositories {
+//		mavenLocal()
+//	}
 
+//	repositories {
+//		mavenLocal {
+//			url 'file://' + System.getProperty('user.home') + '/.m2/repository/'
+//		}
+//	}
 }
 
 dependencies {
