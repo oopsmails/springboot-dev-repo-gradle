@@ -54,7 +54,58 @@ there’s no need for a separate build.gradle build file
 You can now run ./gradlew projects to show that the new sub-projects have been added:
 
 
+### Basic commands
+
+- gradle init
+
+```
+gradle init
 
 
+albert@albert-mint20:~/Documents/dev/gradle/gradle-tutorial$ ./gradlew tasks
+
+> Task :tasks
+
+------------------------------------------------------------
+Tasks runnable from root project 'gradle-tutorial'
+------------------------------------------------------------
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+wrapper - Generates Gradle wrapper files.
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project 'gradle-tutorial'.
+dependencies - Displays all dependencies declared in root project 'gradle-tutorial'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'gradle-tutorial'.
+help - Displays a help message.
+javaToolchains - Displays the detected java toolchains.
+outgoingVariants - Displays the outgoing variants of root project 'gradle-tutorial'.
+projects - Displays the sub-projects of root project 'gradle-tutorial'.
+properties - Displays the properties of root project 'gradle-tutorial'.
+tasks - Displays the tasks runnable from root project 'gradle-tutorial'.
+
+```
+
+- run task
+
+Windows: gradlew <task-name>
+
+Linux/Mac: ./gradlew <task-name>
+
+
+### Groovy
+
+Gradle Groovy DSL: Domain Specific Language
+
+./gradlew build
+
+java -jar build/libs/gradle-tutorial.jar
+
+// no main manifest attribute, in build/libs/gradle-tutorial.jar
+
+add jar task in build.gradle
 
 
