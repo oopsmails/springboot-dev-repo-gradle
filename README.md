@@ -22,6 +22,16 @@ $ ./gradlew build && ./gradlew :application:bootRun
 
 $ ./mvnw install && ./mvnw spring-boot:run -pl application
 
+### 20220711, springboot-dev-repo-gradle, missing spring-boot-java-main
+
+- though in settings.gradle defined, still error ...
+
+```
+include 'spring-boot-java-main'
+```
+
+- Need to build _spring-boot-java-main_ first, Tasks, publishing, publishToMavenLocal, then, build springboot-dev-repo-gradle
+
 ## Learning Gradle
 
 - Ref:
