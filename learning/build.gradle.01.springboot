@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+	id 'org.springframework.boot' version '2.5.2'
+}
+
+group 'com.oopsmails.gradle.basics'
+version '1.0-SNAPSHOT'
+
+java.sourceCompatibility = JavaVersion.VERSION_1_8;
+
+repositories {
+	mavenCentral()
+	mavenLocal() // this is for publishing to maven local
+	maven {
+		url = uri('https://repo.maven.apache.org/maven2/')
+	}
+}
+
+// Encoding
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+// Variables
+def springBootVersion = '2.5.2'
+
+dependencies {
+//	implementation "org.springframework.boot:spring-boot-starter:$springBootVersion"
+	implementation "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+//	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.5.2'
+
+	testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+
+//	runtimeOnly 'org.springframework.boot:spring-boot-devtools:2.5.2'
+}
+
+//configurations {
+//	all*.exclude module: 'spring-boot-starter-logging' // fix logging issue
+//}
+
+ 
+ 
