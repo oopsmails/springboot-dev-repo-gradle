@@ -1,5 +1,6 @@
 package com.oopsmails.springboot.mockbackend;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -17,6 +18,7 @@ import java.util.Collections;
 
 @SpringBootApplication //(scanBasePackages = "com.oopsmails.genericjava")
 @ComponentScan("com.oopsmails.genericjava")
+@Slf4j
 public class SpringBootBackendMockApplication {
 
     public static void main(String[] args) {
@@ -40,6 +42,12 @@ public class SpringBootBackendMockApplication {
      */
     @RestController
     class FileResource {
+
+        @GetMapping("/")
+        public String getGradleBasics() {
+            log.info("calling ............... spring-boot-mock-backend,  getGradleBasics.");
+            return "Hello, from spring-boot-mock-backend project !";
+        }
 
         @GetMapping(path = "/api/files", produces = MediaType.TEXT_PLAIN_VALUE)
         public ResponseEntity<String> getFile() {

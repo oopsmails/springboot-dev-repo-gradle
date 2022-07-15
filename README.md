@@ -51,7 +51,7 @@ This is in fact all that is required. Note that:
 
 there’s no need for a separate directory
 there’s no need for a separate build.gradle build file
-You can now run ./gradlew projects to show that the new sub-projects have been added:
+You can now run *./gradlew projects* on linus or *gradle projects* on Windows to show that the new sub-projects have been added:
 
 
 ### Basic commands

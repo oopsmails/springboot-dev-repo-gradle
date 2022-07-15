@@ -30,7 +30,7 @@ This error is from the mis-configuration of docker-compose, Deocker
 
 Basically, 
 
-```aidl
+```
 # error
 volumes:
   - ./configuration:/home/albert/dockerdata/configuration:delegated
@@ -52,7 +52,7 @@ volumes:
 
 -- nginx.conf is point to Spring application
 
-```aidl
+```
         location /messaging {
             set $upstream spring-boot-kafka-microservice-email;
             set $contextpath /messaging;
