@@ -1,7 +1,7 @@
-package com.sipios.controller;
+package com.oopsmails.kafka.ms.email.controller;
 
-import com.sipios.config.KafkaProperties;
-import com.sipios.dto.ProjectStatusChangeDto;
+import com.oopsmails.kafka.ms.email.config.KafkaProperties;
+import com.oopsmails.kafka.ms.email.dto.ProjectStatusChangeDto;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

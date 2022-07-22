@@ -1,7 +1,7 @@
-package com.sipios.service;
+package com.oopsmails.kafka.ms.email.service;
 
-import com.sipios.dto.EmailContentDto;
-import com.sipios.dto.ProjectStatusChangeDto;
+import com.oopsmails.kafka.ms.email.dto.EmailContentDto;
+import com.oopsmails.kafka.ms.email.dto.ProjectStatusChangeDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;

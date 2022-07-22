@@ -1,8 +1,8 @@
-package com.sipios.listener;
+package com.oopsmails.kafka.ms.email.listener;
 
-import com.sipios.dto.ProjectStatusChangeDto;
-import com.sipios.service.EmailService;
-import com.sipios.service.TemplateService;
+import com.oopsmails.kafka.ms.email.dto.ProjectStatusChangeDto;
+import com.oopsmails.kafka.ms.email.service.EmailService;
+import com.oopsmails.kafka.ms.email.service.TemplateService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;

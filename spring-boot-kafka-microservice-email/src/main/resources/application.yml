@@ -41,7 +41,7 @@ spring:
       mail.smtp.auth: false
       mail.smtp.starttls.enable: false
     addresses:
-      from: dev@sipios.com
+      from: dev@oopsmails.com
       replyTo: no-reply@sipios.com
 
   thymeleaf:

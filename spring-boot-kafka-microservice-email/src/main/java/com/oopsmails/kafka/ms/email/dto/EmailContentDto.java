@@ -1,4 +1,4 @@
-package com.sipios.dto;
+package com.oopsmails.kafka.ms.email.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

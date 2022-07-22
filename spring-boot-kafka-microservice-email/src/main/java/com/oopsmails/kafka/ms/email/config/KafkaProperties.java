@@ -1,4 +1,4 @@
-package com.sipios.config;
+package com.oopsmails.kafka.ms.email.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,6 @@
-package com.sipios.service;
+package com.oopsmails.kafka.ms.email.service;
 
-import com.sipios.dto.EmailContentDto;
+import com.oopsmails.kafka.ms.email.dto.EmailContentDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
