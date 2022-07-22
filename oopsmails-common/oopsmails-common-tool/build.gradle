@@ -13,12 +13,13 @@ repositories {
 	mavenLocal()
 }
 
-def projectName = 'oopsmails-common'
+def projectName = 'oopsmails-common-tool'
 def buildVersion = System.getenv("BUILD_NUMBER")
 def projectVersion = buildVersion != null ? buildVersion : "1.0.0"
 
 bootJar {
 	enabled = false
+	mainClass = 'com.oopsmails.common.tool.json.LocalDateTimeSerializer'
 }
 
 jar {
@@ -39,8 +40,4 @@ dependencies {
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-test {
-	useJUnitPlatform()
 }
