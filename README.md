@@ -54,6 +54,19 @@ there’s no need for a separate build.gradle build file
 You can now run *./gradlew projects* on linus or *gradle projects* on Windows to show that the new sub-projects have been added:
 
 
+### Gradle project more than 2 levels
+
+```
+rootProject.name = 'springboot-dev-repo-gradle'
+include 'spring-boot-java-main'
+include 'spring-boot-mock-backend'
+include 'spring-boot-kafka-microservice-email'
+include 'oopsmails-common'
+include 'oopsmails-common:oopsmails-common-domain'
+```
+
+- A single **Gradle multi-project can have only one settings.gradle file.**
+
 ### Basic commands
 
 - gradle init

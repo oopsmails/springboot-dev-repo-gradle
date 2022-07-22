@@ -1,0 +1,2 @@
+rootProject.name = 'oopsmails-common'
+include 'oopsmails-common-domain'
