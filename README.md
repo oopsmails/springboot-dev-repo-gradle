@@ -121,4 +121,13 @@ java -jar build/libs/gradle-tutorial.jar
 
 add jar task in build.gradle
 
+## Other
 
+spring-boot-mock-backend/src/test/java/com/oopsmails/springboot/mockbackend/SpringBootBackendMockApplicationTest.java
+
+import com.oopsmails.genericjava.service.MyService;
+
+need
+
+- implementation 'com.oopsmails.springboot.dev.repo.gradle:spring-boot-java-main:0.0.1'
+- spring-boot-java-main:Tasks:publishing:publishToMavenLocal
