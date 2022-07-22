@@ -50,6 +50,7 @@ publishing { // this is for publishing to maven local
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter:2.5.2' // version is required for publishing
+	implementation 'com.oopsmails.springboot.dev.repo:oopsmails-common-tool:1.0.0' // version is required for publishing
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
@@ -57,6 +58,9 @@ dependencies {
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools:2.5.2'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.2'
+	testImplementation 'com.oopsmails.springboot.dev.repo:oopsmails-common-tool:1.0.0' // version is required for publishing
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
 test {
