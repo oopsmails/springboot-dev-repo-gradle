@@ -2,11 +2,13 @@ plugins {
 	id 'org.springframework.boot'
 	id 'io.spring.dependency-management'
 	id 'java'
+	id 'maven-publish'
 }
 
 group = 'com.oopsmails.springboot.dev.repo'
 version = '1.0.0'
 sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
@@ -25,5 +27,13 @@ jar {
 	enabled = true
 	archivesBaseName="$projectName"
 	project.version="$projectVersion"
+	archiveClassifier = '' //use empty string
 }
 
+publishing { // this is for publishing to maven local
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+		}
+	}
+}
