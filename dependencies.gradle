@@ -1,0 +1,45 @@
+
+ext.libs = [
+        'springboot' : 'org.springframework.boot:2.5.2',
+        'springDependencyManagement' : 'io.spring.dependency-management:1.0.11.RELEASE',
+
+        'jacksonAnnotations' : 'com.fasterxml.jackson.core:jackson-annotations:2.11.4',
+        'jacksonBinding' : 'com.fasterxml.jackson.core:jackson-binding:2.11.4',
+        'jacksonDatabind' : 'com.fasterxml.jackson.core:jackson-databind:2.11.4',
+
+        'commonsLang3' : 'org.apache.commons:commons-lang3:3.8.1',
+        'lombok' : 'org.projectlombok:lombok:1.18.16',
+        'guava' : 'com.google.guava:guava:31.0.1-jre'
+]
+
+ext.libsTest = [
+        'jupiterApi' : 'org.junit.jupiter:junit-jupiter-api:5.6.0',
+        'jupiterEngine' : 'org.junit.jupiter:junit-jupiter-engine:5.6.0'
+]
+
+
+/****
+
+Usage:     implementation libs.commonsLang3
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.11.4'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.4'
+    implementation 'com.fasterxml.jackson.core:jackson-binding:2.11.4'
+	implementation 'org.apache.commons:commons-lang3:3.8.1'
+    implementation 'org.apache.commons:commons-collections4:4.1'
+    implementation 'commons-codec:commons-codec:1.14'
+    implementation 'org.aspectj:aspectjweaver:1.9.6'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+**/
+
+
