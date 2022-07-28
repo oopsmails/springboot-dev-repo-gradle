@@ -4,9 +4,6 @@ base="/home/albert/Documents"
 workingdir="$base/dev/gradle/springboot-dev-repo-gradle"
 commondir="$workingdir/oopsmails-common"
 
-cmd="gradle clean build publishToMavenLocal"
-
-
 repodir="/home/albert/.m2/repository/com/oopsmails/springboot/dev/repo"
 dirArray=(
 	"oopsmails-common-annotation"
@@ -28,12 +25,12 @@ do
 done
 
 
-
+cmd="gradle clean build publishToMavenLocal --info"
 
 echo "=================================="
 cd $commondir
-# gradle publishToMavenLocal
-$cmd
+# gradle clean build --info
+# $cmd
 wait
 
 cd $commondir/oopsmails-common-domain
@@ -53,7 +50,7 @@ $cmd
 wait
 
 cd $workingdir/spring-boot-java-main/
-gradle clean build publishToMavenLocal
+$cmd
 # gradle --stacktrace --debug clean build
 wait
 
