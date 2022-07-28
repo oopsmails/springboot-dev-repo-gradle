@@ -39,7 +39,7 @@ dependencies {
 //			name: 'spring-boot-java-main',
 //			version: '0.0.1' // This is also working
 
-	implementation 'com.oopsmails.springboot.dev.repo.gradle:spring-boot-java-main:0.0.1'
+	implementation 'com.oopsmails.springboot.dev.repo:spring-boot-java-main:0.0.1'
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'

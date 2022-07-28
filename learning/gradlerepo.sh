@@ -53,10 +53,10 @@ $cmd
 wait
 
 cd $workingdir/spring-boot-java-main/
-gradle clean build
-# gradle --stacktrace --debug clean build 
+gradle clean build publishToMavenLocal
+# gradle --stacktrace --debug clean build
 wait
 
-cd $commondir
+cd $workingdir
 
 echo "=================================="
