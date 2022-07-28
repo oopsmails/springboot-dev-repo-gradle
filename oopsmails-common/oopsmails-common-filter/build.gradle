@@ -36,7 +36,7 @@ dependencies {
 
 	implementation 'com.oopsmails.springboot.dev.repo:oopsmails-common-domain:1.0.0'
 
-	implementation 'org.apache.commons:commons-lang3'
+	implementation libs.commonsLang3
 	implementation 'org.apache.commons:commons-collections4:4.1'
 	implementation 'commons-io:commons-io:2.6'
 	implementation 'commons-beanutils:commons-beanutils:1.9.3'
