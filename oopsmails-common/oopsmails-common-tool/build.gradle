@@ -1,0 +1,54 @@
+plugins {
+	id 'org.springframework.boot'
+	id 'io.spring.dependency-management'
+	id 'java'
+	id 'maven-publish'
+}
+
+group = 'com.oopsmails.springboot.dev.repo'
+version = '1.0.0'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+}
+
+def projectName = 'oopsmails-common-tool'
+def buildVersion = System.getenv("BUILD_NUMBER")
+def projectVersion = buildVersion != null ? buildVersion : "1.0.0"
+
+bootJar {
+	enabled = false
+	mainClass = 'com.oopsmails.common.tool.json.LocalDateTimeSerializer'
+}
+
+jar {
+	enabled = true
+	archivesBaseName="$projectName"
+	project.version="$projectVersion"
+	archiveClassifier = '' //use empty string
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+publishing { // this is for publishing to maven local
+	publications {
+		mavenJava(MavenPublication) {
+//			from components.java
+			artifact jar // if bootJar is disabled
+//			artifact bootJar
+		}
+	}
+}

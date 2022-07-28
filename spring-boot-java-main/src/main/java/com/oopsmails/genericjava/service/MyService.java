@@ -5,13 +5,13 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.stereotype.Service;
 
 @Service
-@EnableConfigurationProperties(ServiceProperties.class)
+@EnableConfigurationProperties(com.oopsmails.genericjava.service.ServiceProperties.class)
 @Slf4j
 public class MyService {
 
-	private final ServiceProperties serviceProperties;
+	private final com.oopsmails.genericjava.service.ServiceProperties serviceProperties;
 
-	public MyService(ServiceProperties serviceProperties) {
+	public MyService(com.oopsmails.genericjava.service.ServiceProperties serviceProperties) {
 		this.serviceProperties = serviceProperties;
 	}
 

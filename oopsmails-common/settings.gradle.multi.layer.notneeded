@@ -1,0 +1,5 @@
+rootProject.name = 'oopsmails-common'
+include 'oopsmails-common-domain'
+include 'oopsmails-common-tool'
+include 'oopsmails-common-filter'
+include 'oopsmails-common-annotation'

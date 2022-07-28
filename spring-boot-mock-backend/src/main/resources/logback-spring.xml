@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" secanPeriod="10 minutes">
     <property name="LOGS" value="./logs" />
-    <property name="projectName" value="sspring-boot-mock-backend" />
+    <property name="projectName" value="spring-boot-mock-backend" />
     <property name="logDirectory" value="${LOGS}/${projectName}" />
 
     <property name="applicationLogFileName" value="application" />

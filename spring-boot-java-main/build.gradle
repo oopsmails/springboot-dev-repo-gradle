@@ -5,8 +5,8 @@ plugins {
 	id 'maven-publish' // this is for publishing to maven local
 }
 
-group = 'com.oopsmails.springboot.dev.repo.gradle'
-version = '0.0.1-SNAPSHOT'
+group = 'com.oopsmails.springboot.dev.repo'
+version = '0.0.1'
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
@@ -26,6 +26,7 @@ bootJar {
 	enabled = false // for testing java, no mainClass defined
 	archivesBaseName="$projectName"+"-boot"
 	project.version="$projectVersion"
+	archiveClassifier = '' //use empty string
 }
 
 jar {
@@ -38,11 +39,11 @@ jar {
 publishing { // this is for publishing to maven local
 	println System.getProperty('user.home')
 	println jar.archiveFileName
-	println jar.archiveName
 
 	publications {
 		mavenJava(MavenPublication) {
-			from components.java
+//			from components.java
+			artifact jar // if bootJar is disabled
 		}
 	}
 
@@ -50,6 +51,9 @@ publishing { // this is for publishing to maven local
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter:2.5.2' // version is required for publishing
+	implementation 'com.oopsmails.springboot.dev.repo:oopsmails-common-tool:1.0.0' // version is required for publishing
+	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.11.4'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.4'
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
@@ -57,6 +61,9 @@ dependencies {
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools:2.5.2'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.2'
+	testImplementation 'com.oopsmails.springboot.dev.repo:oopsmails-common-tool:1.0.0' // version is required for publishing
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
 test {
