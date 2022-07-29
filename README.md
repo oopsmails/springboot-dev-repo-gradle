@@ -9,6 +9,10 @@ Thanks!
 
 ## Run Gradle build
 
+- pure command line
+
+see learning/gradlerepo.sh
+
 - intellij, springboot-dev-repo-gradle
 
 Tasks, build, build
