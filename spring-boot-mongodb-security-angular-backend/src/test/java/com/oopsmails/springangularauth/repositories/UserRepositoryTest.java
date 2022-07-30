@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest(classes = { //
         UserRepositoryTest.UserRepositoryTestTestConfig.class, //
 })
-@Disabled("Need to run Mongodb") // Working here, but disabled all test cases in this class
+//@Disabled("Need to run Mongodb") // Working here, but disabled all test cases in this class
 public class UserRepositoryTest {
     @Autowired
     private UserRepository userRepository;
